@@ -17,17 +17,41 @@
         <p class="lead">Local Weather</p>
       </div>
     </div>
-    
+    <!--Search form-->
     <div id="searchCityholder">
       <div class="col-12">
           <div class="input-group mb-3">
             <input id="cityInput" type="text" class="form-control" placeholder="Search by City" aria-label="Recipient's username" aria-describedby="button-addon2" id="city">
             <div class="input-group-append">
-              <button class="btn btn-warning btn-outline-secondary" type="button" id="findCity"><i id="searchIcon2" class="fa fa-search" aria-hidden="true"></i>Submit</button>
+              <button class="btn btn-warning btn-outline-secondary" type="button" id="targetYelp" onclick=searchCity()><i class="fa fa-map-marker" id="nearMeIcon2" aria-hidden="true"></i>Search</button>
             </div>
           </div>
         </div> 
      </div>
+
+
+      <!--where my information of city will show!-->
+      <div id="info">
+        <div id="searchTime"></div>
+        <div id="cityTitle"></div>
+        <div id="cityTemperature"></div>
+        <div id="cityHumidity"></div>
+        <div id="cityWindspeed"></div>
+        <div id="UVindex"></div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
      <div class="container">
      <div class="col-12">
@@ -43,19 +67,55 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class='col-12'> <div class='card'> <img height='300' width='auto' src='"+ image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + " " + info +"</p></div> </div></div>
+          <div class='col-12'> <div class='card'> <div class='card-header'>Featured</div>
+          <div class='card-body'><h5 id='firstSpot'class='card-title'>" Today"</h5> <ul class="list-group list-group-flush">
+            <li class='list-group-item'>Cras justo odio</li>
+            <li class='list-group-item'>Dapibus ac facilisis in</li>
+            <li class='list-group-item'>Vestibulum at eros</li>
+            <li class='list-group-item'>Vestibulum at eros</li>
+          </ul></div> </div></div>
         </div>
+
         <div class="carousel-item">
-          <div class='col-12'> <div class='card'> <img height='300' width='auto' src='"+ image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + " " + info +"</p></div> </div></div>
+          <div class='col-12'> <div class='card'> <div class='card-header'>Featured</div>
+          <div class='card-body'><h5 id='firstSpot'class='card-title'>" Today"</h5> <ul class="list-group list-group-flush">
+            <li class='list-group-item'>Cras justo odio</li>
+            <li class='list-group-item'>Dapibus ac facilisis in</li>
+            <li class='list-group-item'>Vestibulum at eros</li>
+            <li class='list-group-item'>Vestibulum at eros</li>
+          </ul></div> </div></div>
         </div>
+
         <div class="carousel-item">
-          <div class='col-12'> <div class='card'> <img height='300' width='auto' src='"+ image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + " " + info +"</p></div> </div></div>
+          <div class='col-12'> <div class='card'> <div class='card-header'>Featured</div>
+          <div class='card-body'><h5 id='firstSpot'class='card-title'>" Today"</h5> <ul class="list-group list-group-flush">
+            <li class='list-group-item'>Cras justo odio</li>
+            <li class='list-group-item'>Dapibus ac facilisis in</li>
+            <li class='list-group-item'>Vestibulum at eros</li>
+            <li class='list-group-item'>Vestibulum at eros</li>
+          </ul></div> </div></div>
         </div>
+
         <div class="carousel-item">
-          <div class='col-12'> <div class='card'> <img height='300' width='auto' src='"+ image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + " " + info +"</p></div> </div></div>
-        </div> <div class="carousel-item">
-          <div class='col-12'> <div class='card'> <img height='300' width='auto' src='"+ image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + " " + info +"</p></div> </div></div>
+          <div class='col-12'> <div class='card'> <div class='card-header'>Featured</div>
+          <div class='card-body'><h5 id='firstSpot'class='card-title'>" Today"</h5> <ul class="list-group list-group-flush">
+            <li class='list-group-item'>Cras justo odio</li>
+            <li class='list-group-item'>Dapibus ac facilisis in</li>
+            <li class='list-group-item'>Vestibulum at eros</li>
+            <li class='list-group-item'>Vestibulum at eros</li>
+          </ul></div> </div></div>
         </div>
+
+        <div class="carousel-item">
+          <div class='col-12'> <div class='card'> <div class='card-header'>Featured</div>
+          <div class='card-body'><h5 id='firstSpot'class='card-title'>" Today"</h5> <ul class="list-group list-group-flush">
+            <li class='list-group-item'>Cras justo odio</li>
+            <li class='list-group-item'>Dapibus ac facilisis in</li>
+            <li class='list-group-item'>Vestibulum at eros</li>
+            <li class='list-group-item'>Vestibulum at eros</li>
+          </ul></div> </div></div>
+        </div>
+
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
